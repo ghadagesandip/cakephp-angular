@@ -1,62 +1,67 @@
-<?php
-/**
- *
- * PHP 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-?>
 <!DOCTYPE html>
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
+
 		<?php echo $title_for_layout; ?>
 	</title>
+    <script>
+        var baseUrl = "<?php echo Router::url('/',true);?>";
+        console.log(baseUrl)
+    </script>
 	<?php
-		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
-        echo $this->Html->script(array('jquery-1.10.2.min','angular.min'));
+		echo $this->Html->meta('icon');
+		echo $this->Html->css('bootstrap');
+        echo $this->Html->script(array('bootstrap.min','angularApp'),array('inline'=>false));
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
-		echo $this->fetch('script');
+
 	?>
 </head>
-<body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
 
-			<?php echo $this->Session->flash(); ?>
+<body ng-app="angularJsApp">
 
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-		</div>
-	</div>
-	<?php //echo $this->element('sql_dump'); ?>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Angular Js App</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right" role="form">
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">Sign in</button>
+            </form>
+        </div><!--/.navbar-collapse -->
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container" ng-view>
+        loading...
+    </div>
+</div>
+
+<hr>
+<footer>
+    <p>&copy; Company 2013</p>
+</footer>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+
+<?php echo $this->fetch('script'); ?>
 </body>
 </html>

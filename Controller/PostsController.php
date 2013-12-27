@@ -100,4 +100,37 @@ class PostsController extends AppController {
 			$this->Session->setFlash(__('The post could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
-	}}
+	}
+
+
+
+    public function getPosts(){
+        $posts= $this->Post->find('all');
+        $data = $posts;
+        $posts = array('status'=>'success','data'=>$data);
+        $this->set(compact('posts'));
+        $this->set('_serialize', array('posts'));
+    }
+
+
+
+
+    public function savePost(){
+        $post = array();
+        if ($this->request->is('post')) {
+            $this->Post->create();
+            if ($this->Post->save($this->request->data)) {
+                $post = array('status'=>'success');
+            } else {
+                $post = array('status'=>'fail');
+            }
+        }
+        $this->set(compact('post'));
+        $this->set('_serialize', array('post'));
+    }
+
+
+    public function deletePost(){
+
+    }
+}

@@ -7,8 +7,8 @@ class DATABASE_CONFIG {
         'persistent' => false,
         'host' => 'localhost',
         'login' => 'root',
-        'password' => 'webwerks',
-        'database' => 'cakephpangular',
+        'password' => 'sandip',
+        'database' => 'cakephp-angular',
         'prefix' => '',
         'encoding' => 'utf8',
     );
