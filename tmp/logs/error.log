@@ -1,0 +1,90 @@
+2013-12-28 12:08:04 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /cakephp-angular/
+Stack Trace:
+#0 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(3471): ConnectionManager::getDataSource('default')
+#3 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#4 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(3493): Model->setSource('posts')
+#5 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(2897): Model->getDataSource()
+#6 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#7 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#8 /var/www/cakephp-angular/Controller/PostsController.php(25): PaginatorComponent->paginate()
+#9 [internal function]: PostsController->index()
+#10 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/cakephp-angular/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-12-28 12:08:04 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /cakephp-angular/posts/getPosts.json
+Stack Trace:
+#0 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(3471): ConnectionManager::getDataSource('default')
+#3 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#4 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(3493): Model->setSource('posts')
+#5 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(2897): Model->getDataSource()
+#6 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#7 /var/www/cakephp-angular/Controller/PostsController.php(108): Model->find('all')
+#8 [internal function]: PostsController->getPosts()
+#9 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/cakephp-angular/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-12-28 12:08:16 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /cakephp-angular/
+Stack Trace:
+#0 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(3471): ConnectionManager::getDataSource('default')
+#3 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#4 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(3493): Model->setSource('posts')
+#5 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(2897): Model->getDataSource()
+#6 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#7 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#8 /var/www/cakephp-angular/Controller/PostsController.php(25): PaginatorComponent->paginate()
+#9 [internal function]: PostsController->index()
+#10 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/cakephp-angular/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-12-28 12:08:18 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /cakephp-angular/posts/getPosts.json
+Stack Trace:
+#0 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(3471): ConnectionManager::getDataSource('default')
+#3 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#4 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(3493): Model->setSource('posts')
+#5 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(2897): Model->getDataSource()
+#6 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#7 /var/www/cakephp-angular/Controller/PostsController.php(108): Model->find('all')
+#8 [internal function]: PostsController->getPosts()
+#9 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/cakephp-angular/Vendor/pear-pear.cakephp.org/CakePHP/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/cakephp-angular/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

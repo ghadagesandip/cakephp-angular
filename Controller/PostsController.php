@@ -129,6 +129,14 @@ class PostsController extends AppController {
         $this->set('_serialize', array('post'));
     }
 
+    public function getPost($id){
+        $post= $this->Post->find('first',array('conditions'=>array('Post.id'=>$id)));
+        $data = $post;
+        $post = array('status'=>'success','data'=>$data);
+        $this->set(compact('post'));
+        $this->set('_serialize', array('post'));
+    }
+
 
     public function deletePost(){
 

@@ -1,9 +1,9 @@
 
  <form name="postform" novalidate ng-submit="savePost()">
-     <div class="control-group" ng-class="{error: postform.title.$invalid}">
+     <div class="control-group">
          <label>Title</label>
          <input type="text" name="title" ng-model="post.title" ng-minlength="3" required>
-         <div ng-show="postform.title.$error.minlength" class="help-inline"> too short</div>
+         <div ng-show="postform.title.$error.minlength" class="error"> too short</div>
      </div>
 
      <label>Description : </label>
