@@ -138,7 +138,15 @@ class PostsController extends AppController {
     }
 
 
-    public function deletePost(){
+    public function deletePost($id){
+        $this->Post->id = $id;
+        if($this->Post->delete($id)){
+            $post = array('status'=>'success');
+        }else{
+            $post = array('status'=>'fail');
+        }
 
+        $this->set(compact('post'));
+        $this->set('_serialize', array('post'));
     }
 }

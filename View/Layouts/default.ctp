@@ -9,7 +9,7 @@
 	</title>
     <script>
         var baseUrl = "<?php echo Router::url('/',true);?>";
-        console.log(baseUrl)
+
     </script>
 	<?php
 

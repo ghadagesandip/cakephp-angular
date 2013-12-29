@@ -1,7 +1,7 @@
 <?php
 
 Router::mapResources(array('posts'));
-Router::parseExtensions('json');
+Router::parseExtensions();
 
 /**
  * Routes configuration

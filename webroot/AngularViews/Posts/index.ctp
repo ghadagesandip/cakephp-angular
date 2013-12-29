@@ -26,7 +26,7 @@
                 <td data-ng-bind="post.Post.modified"></td>
                 <th>
                     <a href="#/edit/{{post.Post.id}}"><i class="glyphicon glyphicon-pencil"></i></a>
-                    <a href="#/delete/{{post.Post.id}}"><i class="glyphicon glyphicon-trash"></i></a>
+                    <a ng-click="delete()" data-value="post.Post.id" ><i class="glyphicon glyphicon-trash"></i></a>
                 </th>
             </tr>
             </tbody>

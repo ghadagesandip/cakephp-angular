@@ -1,12 +1,14 @@
 
 var app = angular.module('angularJsApp',['firebase']);
 
+
 app.value('fbURL', 'https://cakephp-angular.firebaseio.com/')
 
 app.config(function($routeProvider){
     $routeProvider.
         when('/projects',{controller : 'ListProjectsCtrl',templateUrl : 'AngularViews/Projects/index.ctp'}).
         when('/newProject', {controller:'NewProjectCtrl', templateUrl:'AngularViews/Projects/add.ctp'}).
+        when('/deletePost/:postId',{controller:'deletePostCtrl'}).
         when('/posts',{controller : 'ListPostsCtrl',templateUrl : 'AngularViews/Posts/index.ctp'}).
         when('/newPost', {controller:'CreateCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
         when('/edit/:postId', {controller:'EditCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
@@ -19,80 +21,81 @@ app.factory('Projects', function($firebase, fbURL) {
     return $firebase(new Firebase(fbURL));
 });
 
+
 app.factory("PostFactory", function($http){
 
     return {
-            getPosts: function(callback) {
-                $http.get('http://localhost/cakephp-angular/posts/getPosts.json').success(callback);
+            getPosts: function() {
+                return $http.get(baseUrl+'posts/getPosts.json')
+            },
+            savePost: function(post) {
+                return $http.post(baseUrl+'posts/savePost.json',post);
+            },
+            getPost : function (id) {
+                return $http.get(baseUrl + 'posts/getPost/' + id+'.json');
+            },
+            deletePost: function(id){
+                return $http.delete(baseUrl + 'posts/deletePost/'+ id+'.json');
             }
         };
 
 });
 
 
-
-/*
-app.service("PostsService",function($http){
-    this.getPosts = function(){
-            $http({method: 'GET', url: 'http://localhost/cakephp-angular/posts/getPosts.json'}).
-            success(function(data, status, headers, config) {
-                // this callback will be called asynchronously
-                // when the response is available
-               return data.posts
-            }).
-            error(function(data, status, headers, config) {
-                // called asynchronously if an error occurs
-                // or server returns response with an error status.
-            });
-
-    }
-});
-*/
-
 app.controller('ListPostsCtrl',function($scope,PostFactory){
+         PostFactory.getPosts()
+        .success(function (result) {
+            $scope.posts = result.posts.data;
+        })
+        .error(function (error) {
+            $scope.status = 'Unable to load customer data: ' + error.message;
+        });
 
 
-    PostFactory.getPosts(function(results) {
-        $scope.posts = results.posts.data;
-    });
-
-
-
-
+        $scope.delete = function(){
+            alert('hello')
+            return false;
+        }
 });
 
-app.controller("CreateCtrl",function($scope,$location,$http){
+
+
+app.controller("CreateCtrl",function($scope,$location,PostFactory){
 
     $scope.savePost = function(){
 
-        $http.post('http://localhost/cakephp-angular/posts/savePost.json', $scope.post).
-        success(function(){
-            $scope.post = {};
-            $location.path('/');
-        });
+        PostFactory.savePost($scope.post)
+            .success(function(){
+                $location.path('/');
+            });
+            error(function(error) {
+                $scope.status = 'Unable to insert post: ' + error.message;
+            });
     }
 
 });
 
 
-app.controller("EditCtrl",function($scope,$routeParams,$location,$http){
-    console.log($routeParams.postId)
-    $scope.post=[];
-    $http.get('http://localhost/cakephp-angular/posts/getPost/'+$routeParams.postId+'.json')
-        .then(function(result) {
-            console.log(result.data.post.data.Post);
-            $scope.post = result.data.post.data.Post;
+app.controller("EditCtrl",function($scope,$routeParams,$location,PostFactory){
 
+    PostFactory.getPost($routeParams.postId)
+        .success(function (result) {
+            $scope.post = result.post.data.Post;
+        })
+        .error(function (error) {
+            $scope.status = 'Unable to load customer data: ' + error.message;
         });
 
 
     $scope.savePost = function() {
-        $http.post('http://localhost/cakephp-angular/posts/savePost.json', $scope.post).
-        success(function(){
-            $scope.post = {};
-            $location.path('/');
-        });
-    };
+        PostFactory.savePost($scope.post)
+            .success(function(){
+                $scope.post = {};
+                $location.path('/');
+            })
+    }
+
+
 });
 
 
