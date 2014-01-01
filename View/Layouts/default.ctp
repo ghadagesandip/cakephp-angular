@@ -51,7 +51,7 @@
 </div>
 
 <div class="jumbotron">
-    <div class="container" ng-view>
+    <div class="container" ng-view ng-animate="'slide'" >
         loading...
     </div>
 </div>
@@ -63,6 +63,7 @@
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-resource.min.js"></script>
+<script src="http://code.angularjs.org/1.2.6/angular-animate.min.js"></script>
 <script src="https://cdn.firebase.com/v0/firebase.js"></script>
 <script src="https://cdn.firebase.com/libs/angularfire/0.5.0/angularfire.min.js"></script>
 <?php echo $this->fetch('script'); ?>

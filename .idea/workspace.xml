@@ -5,11 +5,11 @@
     <ignored path="cakephpComposer.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/database.php" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1385794186694" ignored="false" />
-    <file path="/default.ctp" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388245311045" ignored="false" />
-    <file path="/angularApp.js" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388337020340" ignored="false" />
+    <file path="/default.ctp" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388342130881" ignored="false" />
+    <file path="/angularApp.js" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388572641257" ignored="false" />
     <file path="/PostsController.php" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388312945230" ignored="false" />
     <file path="/dummy.txt" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388243996238" ignored="false" />
-    <file path="/index.ctp" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388337145178" ignored="false" />
+    <file path="/index.ctp" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388572234308" ignored="false" />
     <file path="$PROJECT_DIR$/tmp/logs/error.log" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388306685503" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,25 +24,30 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="cakephpComposer" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="angularApp.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webroot/js/angularApp.js">
+      <file leaf-file-name="index.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webroot/AngularViews/Posts/index.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="26" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.0">
+            <state line="28" column="56" selection-start="1214" selection-end="1214" vertical-scroll-proportion="-13.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ctp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webroot/AngularViews/Posts/index.ctp">
+      <file leaf-file-name="angularApp.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webroot/js/angularApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="43" selection-start="1201" selection-end="1205" vertical-scroll-proportion="0.6112266">
+            <state line="10" column="8" selection-start="400" selection-end="400" vertical-scroll-proportion="0.3125">
               <folding />
             </state>
           </provider>
@@ -51,7 +56,7 @@
       <file leaf-file-name="PostsController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/PostsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="30" selection-start="3510" selection-end="3510" vertical-scroll-proportion="0.0">
+            <state line="141" column="30" selection-start="3510" selection-end="3510" vertical-scroll-proportion="-9.958333">
               <folding />
             </state>
           </provider>
@@ -73,11 +78,11 @@
         <option value="$PROJECT_DIR$/webroot/AngularViews/Projects/add.ctp" />
         <option value="$PROJECT_DIR$/webroot/AngularViews/Projects/index.ctp" />
         <option value="$PROJECT_DIR$/Config/database.php" />
-        <option value="$PROJECT_DIR$/View/Layouts/default.ctp" />
         <option value="$PROJECT_DIR$/Config/routes.php" />
         <option value="$PROJECT_DIR$/Controller/PostsController.php" />
-        <option value="$PROJECT_DIR$/webroot/js/angularApp.js" />
+        <option value="$PROJECT_DIR$/View/Layouts/default.ctp" />
         <option value="$PROJECT_DIR$/webroot/AngularViews/Posts/index.ctp" />
+        <option value="$PROJECT_DIR$/webroot/js/angularApp.js" />
       </list>
     </option>
   </component>
@@ -159,43 +164,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AngularViews" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cakephpComposer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cakephp-angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AngularViews" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cakephpComposer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cakephp-angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -209,8 +178,8 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Angular-Tutorial" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -236,14 +205,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="55" width="1152" height="692" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2789855" sideWeight="0.6709559" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28442028" sideWeight="0.6709559" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290441" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -320,13 +289,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webroot/js/angularApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="38" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webroot/AngularViews/Posts/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="33" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
@@ -336,7 +298,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webroot/AngularViews/Posts/add.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="53" selection-start="46" selection-end="54" vertical-scroll-proportion="0.0" />
+        <state line="1" column="53" selection-start="46" selection-end="54" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/PostsController.php">
@@ -385,33 +349,44 @@
         <state line="3" column="24" selection-start="69" selection-end="69" vertical-scroll-proportion="0.031712472" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Layouts/default.ctp">
+    <entry file="file://$PROJECT_DIR$/webroot/AngularViews/Posts/add.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="458" selection-end="458" vertical-scroll-proportion="0.22826087" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/PostsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="30" selection-start="3510" selection-end="3510" vertical-scroll-proportion="0.0">
+        <state line="1" column="53" selection-start="46" selection-end="54" vertical-scroll-proportion="0.030364372">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/AngularViews/Posts/add.ctp">
+    <entry file="file://$PROJECT_DIR$/View/Layouts/default.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="53" selection-start="46" selection-end="54" vertical-scroll-proportion="0.030364372" />
+        <state line="56" column="6" selection-start="1788" selection-end="1788" vertical-scroll-proportion="0.34511435">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/js/angularApp.js">
+    <entry file="file://$PROJECT_DIR$/webroot/js/angular-animate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="26" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.0">
+        <state line="17" column="2" selection-start="420" selection-end="420" vertical-scroll-proportion="0.5049505">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/PostsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="30" selection-start="3510" selection-end="3510" vertical-scroll-proportion="-9.958333">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webroot/AngularViews/Posts/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="43" selection-start="1201" selection-end="1205" vertical-scroll-proportion="0.6112266">
+        <state line="28" column="56" selection-start="1214" selection-end="1214" vertical-scroll-proportion="-13.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/js/angularApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="8" selection-start="400" selection-end="400" vertical-scroll-proportion="0.3125">
           <folding />
         </state>
       </provider>

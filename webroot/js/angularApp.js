@@ -8,7 +8,6 @@ app.config(function($routeProvider){
     $routeProvider.
         when('/projects',{controller : 'ListProjectsCtrl',templateUrl : 'AngularViews/Projects/index.ctp'}).
         when('/newProject', {controller:'NewProjectCtrl', templateUrl:'AngularViews/Projects/add.ctp'}).
-        when('/deletePost/:postId',{controller:'deletePostCtrl'}).
         when('/posts',{controller : 'ListPostsCtrl',templateUrl : 'AngularViews/Posts/index.ctp'}).
         when('/newPost', {controller:'CreateCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
         when('/edit/:postId', {controller:'EditCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
@@ -42,19 +41,23 @@ app.factory("PostFactory", function($http){
 });
 
 
-app.controller('ListPostsCtrl',function($scope,PostFactory){
-         PostFactory.getPosts()
-        .success(function (result) {
-            $scope.posts = result.posts.data;
-        })
-        .error(function (error) {
-            $scope.status = 'Unable to load customer data: ' + error.message;
-        });
+app.controller('ListPostsCtrl',function($scope,PostFactory,$location){
+        showPosts();
+        function showPosts(){
+            PostFactory.getPosts()
+                .success(function (result) {
+                    $scope.posts = result.posts.data;
+                })
+                .error(function (error) {
+                    $scope.status = 'Unable to load customer data: ' + error.message;
+                });
 
-
-        $scope.delete = function(){
-            alert('hello')
-            return false;
+        }
+        $scope.deletePost = function(id){
+            PostFactory.deletePost(id)
+                .success(function(){
+                    showPosts();
+                })
         }
 });
 
@@ -98,6 +101,14 @@ app.controller("EditCtrl",function($scope,$routeParams,$location,PostFactory){
 
 });
 
+app.controller("deletePostCtrl",function($scope,$routeParas,$location,PostFactory){
+
+    PostFactory.deletePost($routeParams.postId)
+        .success(function(){
+            $location.path('/');
+    });
+
+});
 
 app.controller("ListProjectsCtrl",function($scope,Projects){
     $scope.projects = Projects;
