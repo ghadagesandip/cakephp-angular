@@ -60,12 +60,13 @@
 <footer>
     <p>&copy; Company 2013</p>
 </footer>
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-resource.min.js"></script>
-<script src="http://code.angularjs.org/1.2.6/angular-animate.min.js"></script>
-<script src="https://cdn.firebase.com/v0/firebase.js"></script>
-<script src="https://cdn.firebase.com/libs/angularfire/0.5.0/angularfire.min.js"></script>
+<?php echo $this->Html->script(array('jquery-1.10.2.min','angular.min','angular-animate.min','firebase','angularfire.min'));?>
+<!--<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-resource.min.js"></script>-->
+<!--<script src="http://code.angularjs.org/1.2.6/angular-animate.min.js"></script>-->
+<!--<script src="https://cdn.firebase.com/v0/firebase.js"></script>-->
+<!--<script src="https://cdn.firebase.com/libs/angularfire/0.5.0/angularfire.min.js"></script>-->
 <?php echo $this->fetch('script'); ?>
 </body>
 </html>
