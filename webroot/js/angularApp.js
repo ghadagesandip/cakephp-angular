@@ -6,12 +6,28 @@ app.value('fbURL', 'https://cakephp-angular.firebaseio.com/')
 
 app.config(function($routeProvider){
     $routeProvider.
+        when('/users',{controller : 'ListUsersCtrl',templateUrl : 'AngularViews/Users/index.ctp'}).
+        when('/newUser',{controller : 'AddUserCtrl',templateUrl : 'AngularViews/Users/add.ctp'}).
+
         when('/projects',{controller : 'ListProjectsCtrl',templateUrl : 'AngularViews/Projects/index.ctp'}).
         when('/newProject', {controller:'NewProjectCtrl', templateUrl:'AngularViews/Projects/add.ctp'}).
+
         when('/posts',{controller : 'ListPostsCtrl',templateUrl : 'AngularViews/Posts/index.ctp'}).
         when('/newPost', {controller:'CreateCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
         when('/edit/:postId', {controller:'EditCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
         otherwise({ redirectTo :'/posts'});
+
+});
+
+
+app.directive("unique-email",function(){
+  return{
+      restrict:"E",
+
+      link:function(scope){
+
+      }
+  }
 
 });
 
@@ -40,6 +56,14 @@ app.factory("PostFactory", function($http){
 
 });
 
+
+app.factory("UserFactory",function($http){
+   return {
+       getUsers : function(){
+           return $http.get(baseUrl+'users/getUsers.json')
+       }
+   }
+});
 
 app.controller('ListPostsCtrl',function($scope,PostFactory,$location){
         showPosts();
@@ -110,10 +134,13 @@ app.controller("deletePostCtrl",function($scope,$routeParas,$location,PostFactor
 
 });
 
+
+
+
+
 app.controller("ListProjectsCtrl",function($scope,Projects){
     $scope.projects = Projects;
 });
-
 
 app.controller("NewProjectCtrl",function($scope, $location, $timeout, Projects){
     $scope.save = function() {
@@ -121,4 +148,22 @@ app.controller("NewProjectCtrl",function($scope, $location, $timeout, Projects){
             $timeout(function() { $location.path('/projects'); });
         });
     };
-})
+});
+
+
+
+
+
+app.controller("ListUsersCtrl",function($scope,UserFactory){
+    getUsers();
+    function getUsers(){
+        UserFactory.getUsers()
+            .success(function(result){
+                $scope.users = result.users.data;
+            })
+    }
+});
+
+app.controller("AddUserCtrl",function($scope){
+
+});
