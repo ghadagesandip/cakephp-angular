@@ -101,7 +101,7 @@ class UsersController extends AppController {
     public function getUsers(){
         $users= $this->User->find('all');
         $data = $users;
-        $users = array('status'=>'success','data'=>$data);
+        $users = array('status'=>'success','data'=>$data,'message'=>'loaded '.count($users).' records');
         $this->set(compact('users'));
         $this->set('_serialize', array('users'));
     }

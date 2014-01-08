@@ -65,12 +65,18 @@ app.factory("UserFactory",function($http){
    }
 });
 
-app.controller('ListPostsCtrl',function($scope,PostFactory,$location){
+
+
+
+
+app.controller('ListPostsCtrl',['$scope','PostFactory','$location',function($scope,PostFactory,$location){
         showPosts();
         function showPosts(){
             PostFactory.getPosts()
                 .success(function (result) {
                     $scope.posts = result.posts.data;
+                    $scope.status = result.posts.status;
+                    $scope.message = result.posts.message;
                 })
                 .error(function (error) {
                     $scope.status = 'Unable to load customer data: ' + error.message;
@@ -83,11 +89,11 @@ app.controller('ListPostsCtrl',function($scope,PostFactory,$location){
                     showPosts();
                 })
         }
-});
+}]);
 
 
 
-app.controller("CreateCtrl",function($scope,$location,PostFactory){
+app.controller("CreateCtrl",['$scope','$location','PostFactory',function($scope,$location,PostFactory){
 
     $scope.savePost = function(){
 
@@ -100,10 +106,10 @@ app.controller("CreateCtrl",function($scope,$location,PostFactory){
             });
     }
 
-});
+}]);
 
 
-app.controller("EditCtrl",function($scope,$routeParams,$location,PostFactory){
+app.controller("EditCtrl",['$scope','$routeParams','$location','PostFactory',function($scope,$routeParams,$location,PostFactory){
 
     PostFactory.getPost($routeParams.postId)
         .success(function (result) {
@@ -123,47 +129,49 @@ app.controller("EditCtrl",function($scope,$routeParams,$location,PostFactory){
     }
 
 
-});
+}]);
 
-app.controller("deletePostCtrl",function($scope,$routeParas,$location,PostFactory){
+app.controller("deletePostCtrl",['$scope','$routeParas','$location','PostFactory',function($scope,$routeParas,$location,PostFactory){
 
     PostFactory.deletePost($routeParams.postId)
         .success(function(){
             $location.path('/');
     });
 
-});
+}]);
 
 
 
 
 
-app.controller("ListProjectsCtrl",function($scope,Projects){
+app.controller("ListProjectsCtrl",['$scope','Projects',function($scope,Projects){
     $scope.projects = Projects;
-});
+}]);
 
-app.controller("NewProjectCtrl",function($scope, $location, $timeout, Projects){
+
+
+app.controller("NewProjectCtrl",['$scope','$location','$timeout','Projects',function($scope, $location, $timeout, Projects){
     $scope.save = function() {
         Projects.$add($scope.project, function() {
             $timeout(function() { $location.path('/projects'); });
         });
     };
-});
+}]);
 
 
 
-
-
-app.controller("ListUsersCtrl",function($scope,UserFactory){
+app.controller("ListUsersCtrl",['$scope','UserFactory',function($scope,UserFactory){
     getUsers();
     function getUsers(){
         UserFactory.getUsers()
             .success(function(result){
                 $scope.users = result.users.data;
+                $scope.status = result.users.status;
+                $scope.message = result.users.message;
             })
     }
-});
+}]);
 
-app.controller("AddUserCtrl",function($scope){
+app.controller("AddUserCtrl",['$scope',function($scope){
 
-});
+}]);

@@ -107,7 +107,7 @@ class PostsController extends AppController {
     public function getPosts(){
         $posts= $this->Post->find('all');
         $data = $posts;
-        $posts = array('status'=>'success','data'=>$data);
+        $posts = array('status'=>'success','message'=>'loaded '.count($posts).' records','data'=>$data);
         $this->set(compact('posts'));
         $this->set('_serialize', array('posts'));
     }
