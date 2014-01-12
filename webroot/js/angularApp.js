@@ -4,31 +4,48 @@ var app = angular.module('angularJsApp',['firebase']);
 
 app.value('fbURL', 'https://cakephp-angular.firebaseio.com/')
 
-app.config(function($routeProvider){
+app.config(['$routeProvider',function($routeProvider){
     $routeProvider.
-        when('/users',{controller : 'ListUsersCtrl',templateUrl : 'AngularViews/Users/index.ctp'}).
-        when('/newUser',{controller : 'AddUserCtrl',templateUrl : 'AngularViews/Users/add.ctp'}).
+        when('/users',{ title: 'Users',controller : 'ListUsersCtrl',templateUrl : 'AngularViews/Users/index.ctp'}).
+        when('/newUser',{title:"Add User",controller : 'AddUserCtrl',templateUrl : 'AngularViews/Users/add.ctp'}).
 
-        when('/projects',{controller : 'ListProjectsCtrl',templateUrl : 'AngularViews/Projects/index.ctp'}).
-        when('/newProject', {controller:'NewProjectCtrl', templateUrl:'AngularViews/Projects/add.ctp'}).
+        when('/projects',{ title: 'Project',controller : 'ListProjectsCtrl',templateUrl : 'AngularViews/Projects/index.ctp'}).
+        when('/newProject', {title:"Add Project", controller:'NewProjectCtrl', templateUrl:'AngularViews/Projects/add.ctp'}).
 
-        when('/posts',{controller : 'ListPostsCtrl',templateUrl : 'AngularViews/Posts/index.ctp'}).
-        when('/newPost', {controller:'CreateCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
-        when('/edit/:postId', {controller:'EditCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
+        when('/posts',{ title: 'Posts',controller : 'ListPostsCtrl',templateUrl : 'AngularViews/Posts/index.ctp'}).
+        when('/newPost', {title:"Add Post",controller:'CreateCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
+        when('/edit/:postId', {title:"Update Post", controller:'EditCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
         otherwise({ redirectTo :'/posts'});
 
-});
+}]);
 
+
+app.run(['$location', '$rootScope', function($location, $rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.title = current.$$route.title;
+    });
+}]);
 
 app.directive("unique-email",function(){
   return{
       restrict:"E",
-
       link:function(scope){
 
       }
   }
 
+});
+
+
+app.directive("confirmPassCheck",function(){
+   return{
+       restrict:"C",
+       link:function(scope,attrs,element){
+           scope.$watch(element.ngModel,function(value){
+              console.log(value);
+           });
+       }
+   }
 });
 
 
@@ -70,6 +87,7 @@ app.factory("UserFactory",function($http){
 
 
 app.controller('ListPostsCtrl',['$scope','PostFactory','$location',function($scope,PostFactory,$location){
+        $scope.title ="Posts";
         showPosts();
         function showPosts(){
             PostFactory.getPosts()
@@ -93,8 +111,8 @@ app.controller('ListPostsCtrl',['$scope','PostFactory','$location',function($sco
 
 
 
-app.controller("CreateCtrl",['$scope','$location','PostFactory',function($scope,$location,PostFactory){
-
+app.controller("CreateCtrl",['$scope','$rootScope','$location','PostFactory',function($scope,$rootScope,$location,PostFactory){
+    $rootScope.title = "add post";
     $scope.savePost = function(){
 
         PostFactory.savePost($scope.post)
@@ -162,6 +180,8 @@ app.controller("NewProjectCtrl",['$scope','$location','$timeout','Projects',func
 
 app.controller("ListUsersCtrl",['$scope','UserFactory',function($scope,UserFactory){
     getUsers();
+    $scope.title ="Users";
+
     function getUsers(){
         UserFactory.getUsers()
             .success(function(result){

@@ -1,15 +1,13 @@
 
 <!DOCTYPE html>
-<html>
+<html ng-app="angularJsApp">
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-
-		<?php echo $title_for_layout; ?>
-	</title>
+		{{title}}
+    </title>
     <script>
         var baseUrl = "<?php echo Router::url('/',true);?>";
-
     </script>
 	<?php
 
@@ -22,7 +20,7 @@
 	?>
 </head>
 
-<body ng-app="angularJsApp">
+<body >
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">

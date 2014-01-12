@@ -18,14 +18,20 @@
         <label>Email</label>
         <input type="email" name="email" ng-model="user.email" required>
         <div ng-show="userform.email.$error.email" class="error"> Please enter valid email</div>
+        <div ng-show="userform.email.$error.required" class="error"> Please enter email address </div>
     </div>
 
     <div class="control-group">
         <label>Password</label>
         <input type="password" name="password" ng-model="user.password"   required>
-        <div uniqueemail></div>
-        <div ng-show="userform.password.$error.required" class="error"> Please enter valid password</div>
+        <div ng-show="userform.password.$error.required" class="error"> Please enter password</div>
+    </div>
 
+    <div class="control-group">
+        <label>Confirm Password</label>
+        <input type="password" name="confirm_password" ng-model="user.confirm_password" class="confirm_pass_check"  required>
+        <div ng-show="userform.confirm_password.$error.required" class="error"> Please enter confirm password</div>
+        <div></div>
     </div>
 
     <div class="control-group">
