@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/database.php" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1385794186694" ignored="false" />
     <file path="/default.ctp" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1389464340235" ignored="false" />
-    <file path="/angularApp.js" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1389548457848" ignored="false" />
+    <file path="/angularApp.js" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1389726745973" ignored="false" />
     <file path="/PostsController.php" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388839453291" ignored="false" />
     <file path="/dummy.txt" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388243996238" ignored="false" />
     <file path="/index.ctp" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388844935972" ignored="false" />
@@ -18,7 +18,7 @@
     <file path="/WwPackagesController.php" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388747948012" ignored="false" />
     <file path="/wedding_website_package.ctp" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388751489599" ignored="false" />
     <file path="/UsersController.php" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388839380548" ignored="false" />
-    <file path="/add.ctp" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1389537858438" ignored="false" />
+    <file path="/add.ctp" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1389726187496" ignored="false" />
     <file path="$PROJECT_DIR$/../angularApp/directives1.html" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388846418351" ignored="false" />
     <file path="$PROJECT_DIR$/../angularApp/directives.html" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388846313737" ignored="false" />
     <file path="$PROJECT_DIR$/../angularApp/directive3.html" changelist="f9f948d5-98b5-473d-b864-1552e65779a1" time="1388846503151" ignored="false" />
@@ -54,16 +54,7 @@
       <file leaf-file-name="add.ctp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webroot/AngularViews/Users/add.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="86" selection-start="1371" selection-end="1392" vertical-scroll-proportion="-10.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Layouts/default.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="46" selection-start="2005" selection-end="2005" vertical-scroll-proportion="-36.75">
+            <state line="31" column="53" selection-start="1343" selection-end="1359" vertical-scroll-proportion="-11.458333">
               <folding />
             </state>
           </provider>
@@ -72,7 +63,7 @@
       <file leaf-file-name="angularApp.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webroot/js/angularApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="33" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.8064516">
+            <state line="39" column="31" selection-start="1427" selection-end="1443" vertical-scroll-proportion="0.26362038">
               <folding />
             </state>
           </provider>
@@ -108,10 +99,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="27" />
-    <option name="width" value="1154" />
-    <option name="height" value="838" />
+    <option name="width" value="1147" />
+    <option name="height" value="756" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -188,28 +178,6 @@
               <option name="myItemId" value="AngularViews" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cakephpComposer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cakephp-angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AngularViews" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -235,8 +203,8 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../angularApp" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -266,7 +234,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1154" height="838" extended-state="6" />
+    <frame x="0" y="27" width="1147" height="756" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -274,7 +242,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31735986" sideWeight="0.67190224" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2911738" sideWeight="0.67190224" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32809773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -423,28 +391,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/View/Users/add.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/View/Layouts/default.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="46" selection-start="2005" selection-end="2005" vertical-scroll-proportion="-36.75">
+        <state line="62" column="46" selection-start="2005" selection-end="2005" vertical-scroll-proportion="1.5504587">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webroot/AngularViews/Users/add.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="86" selection-start="1371" selection-end="1392" vertical-scroll-proportion="-10.5">
+        <state line="31" column="53" selection-start="1343" selection-end="1359" vertical-scroll-proportion="-11.458333">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webroot/js/angularApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="33" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.8064516">
+        <state line="39" column="31" selection-start="1427" selection-end="1443" vertical-scroll-proportion="0.26362038">
           <folding />
         </state>
       </provider>

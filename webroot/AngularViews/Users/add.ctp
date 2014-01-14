@@ -29,7 +29,7 @@
 
     <div class="control-group">
         <label>Confirm Password</label>
-        <input type="password" name="confirm_password" ng-model="user.confirm_password" class="confirm_pass_check"  required>
+        <input type="password" name="confirm_password" same-as="{{user.password}}" ng-model="user.confirm_password" class="confirm_pass_check"  required>
         <div ng-show="userform.confirm_password.$error.required" class="error"> Please enter confirm password</div>
         <div></div>
     </div>

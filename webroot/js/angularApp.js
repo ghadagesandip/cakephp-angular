@@ -40,9 +40,11 @@ app.directive("unique-email",function(){
 app.directive("confirmPassCheck",function(){
    return{
        restrict:"C",
-       link:function(scope,attrs,element){
-           scope.$watch(element.ngModel,function(value){
-              console.log(value);
+       require:'ngModel',
+       template:"<div>password : {{message}}</div>",
+       link:function(scope,element,attrs){
+           scope.$watch(attrs.ngModel,function(value){
+              scope.message = "password are same"
            });
        }
    }
