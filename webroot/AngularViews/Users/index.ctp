@@ -33,7 +33,7 @@
                     <td data-ng-bind="user.User.dob"></td>
                     <td data-ng-bind="user.User.gender"></td>
                     <th>
-                        <a href="#/edit/{{user.User.id}}"><i class="glyphicon glyphicon-pencil"></i></a>
+                        <a href="#/update-user/{{user.User.id}}"><i class="glyphicon glyphicon-pencil"></i></a>
                         <a ng-click="deletePost(user.User.id)"  ><i class="glyphicon glyphicon-trash"></i></a>
                     </th>
                 </tr>

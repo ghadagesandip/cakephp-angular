@@ -7120,3 +7120,23 @@ td.visible-print {
     display: none !important;
   }
 }
+
+
+
+input.ng-invalid {
+    border: 1px solid red;
+}
+input.ng-valid {
+    border: 1px solid green;
+}
+
+
+.animate-enter {
+    -webkit-transition: 1s linear all; /* Chrome */
+    transition: 1s linear all;
+    opacity: 0;
+}
+
+.animate-enter.animate-enter-active {
+    opacity: 1;
+}

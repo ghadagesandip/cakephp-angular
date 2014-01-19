@@ -1,8 +1,9 @@
+<h2>Create your account</h2>
 
-<form name="userform" novalidate ng-submit="saveUser()">
+<form name="userform" novalidate ng-submit="registerUser()">
     <div class="control-group">
         <label>First Name : </label>
-        <input type="text" name="first_name" data-ng-model="post.first_name" required ng-pattern="/^[a-zA-Z]+$/" ng-minlength="3">
+        <input type="text" name="first_name" data-ng-model="user.first_name" required ng-pattern="/^[a-zA-Z]+$/" ng-minlength="3">
         <div ng-show="userform.first_name.$error.required" class="error"> Please enter first name</div>
         <div ng-show="userform.first_name.$error.pattern" class="error"> Please enter alphabets only</div>
         <div ng-show="userform.first_name.$error.minlength" class="error"> please enter al least 3 characters</div>
@@ -11,7 +12,7 @@
 
     <div class="control-group">
         <label>Last Name : </label>
-        <input type="text" name="last_name" data-ng-model="post.last_name" required ng-pattern="/^[a-zA-Z]+$/" ng-minlength="3" />
+        <input type="text" name="last_name" data-ng-model="user.last_name" required ng-pattern="/^[a-zA-Z]+$/" ng-minlength="3" />
         <div ng-show="userform.last_name.$error.required" class="error"> Please enter lasts name</div>
         <div ng-show="userform.first_name.$error.pattern" class="error"> Please enter alphabets only</div>
         <div ng-show="userform.first_name.$error.minlength" class="error"> please enter al least 3 characters</div>
@@ -43,9 +44,9 @@
 
     <div class="control-group">
         <label>Date Of Birth</label>
-        <input datepicker type="date" name="dob" ng-model="user.dob" required>
-        <div ng-show="userform.email.$error.required" class="error"> Please enter valid dob</div>
-        <div ng-show="userform.email.$error.date" class="error"> Please enter valid date</div>
+        <input class="datepicker" type="date" name="dob" ng-model="user.dob" required>
+        <div ng-show="userform.dob.$error.required" class="error"> this field is required</div>
+
     </div>
 
     <div class="control-group">
@@ -54,7 +55,7 @@
             <option value="Male">Male</option>
             <option value="Female">Female</option>
         </select>
-       <div ng-show="userform.gender.$error.required" class="error"> Please select gender</div>
+        <div ng-show="userform.gender.$error.required" class="error"> Please select gender</div>
 
     </div>
 

@@ -3,8 +3,8 @@
 <html ng-app="angularJsApp">
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>
-		{{title}}
+	<title data-ng-bind="title">
+		Home
     </title>
     <script>
         var baseUrl = "<?php echo Router::url('/',true);?>";
@@ -51,7 +51,7 @@
 </div>
 
 <div class="jumbotron">
-    <div class="container" ng-view ng-animate="'slide'" >
+    <div class="container" ng-view ng-animate=" 'animate' " >
         loading...
     </div>
 </div>
@@ -62,5 +62,13 @@
 </footer>
 <?php echo $this->Html->script(array('jquery-1.10.2.min','angular.min','angular-animate.min','firebase','angularfire.min'));?>
 <?php echo $this->fetch('script'); ?>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css" media="all" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script>
+<script>
+    $(function() {
+        $( ".datepicker" ).datepicker();
+    });
+</script>
 </body>
 </html>

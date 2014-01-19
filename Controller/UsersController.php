@@ -116,7 +116,7 @@ class UsersController extends AppController {
             if ($this->User->save($this->request->data)) {
                 $user = array('status'=>'success');
             } else {
-                $user = array('status'=>'fail');
+                $user = array('status'=>'fail','message'=>'unable to user');
             }
         }
         $this->set(compact('user'));
