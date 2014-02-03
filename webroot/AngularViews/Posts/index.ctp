@@ -32,7 +32,7 @@
                         <td data-ng-bind="post.Post.created"></td>
                         <td data-ng-bind="post.Post.modified"></td>
                         <th>
-                            <a ng-href="#/edit/{{post.Post.id}}"><i class="glyphicon glyphicon-pencil"></i></a>
+                            <a ng-href="#/edit/{{post.Post.id}}" confirm-delete><i class="glyphicon glyphicon-pencil"></i></a>
                             <a ng-click="deletePost(post.Post.id)"  ><i class="glyphicon glyphicon-trash"></i></a>
                         </th>
                     </tr>

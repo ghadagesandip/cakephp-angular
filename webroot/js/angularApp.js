@@ -1,11 +1,17 @@
 
 var app = angular.module('angularJsApp',['firebase']);
 
+app.value('fbURL', 'https://cakephp-angular.firebaseio.com/');
 
-app.value('fbURL', 'https://cakephp-angular.firebaseio.com/')
+
 
 app.config(['$routeProvider',function($routeProvider){
     $routeProvider.
+        when('/',{ title: 'Posts',controller : 'ListPostsCtrl',templateUrl : 'AngularViews/Posts/index.ctp'}).
+        when('/posts',{ title: 'Posts',controller : 'ListPostsCtrl',templateUrl : 'AngularViews/Posts/index.ctp'}).
+        when('/newPost', {title:"Add Post",controller:'CreateCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
+        when('/edit/:postId', {title:"Update Post", controller:'EditCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
+
         when('/users',{ title: 'Users',controller : 'ListUsersCtrl',templateUrl : 'AngularViews/Users/index.ctp'}).
         when('/newUser',{title:"Add User",controller : 'AddUserCtrl',templateUrl : 'AngularViews/Users/add.ctp'}).
         when('/register',{title:"Registration",controller : 'RegisterUserCtrl',templateUrl : 'AngularViews/Users/register.ctp'}).
@@ -15,9 +21,6 @@ app.config(['$routeProvider',function($routeProvider){
         when('/newProject', {title:"Add Project", controller:'NewProjectCtrl', templateUrl:'AngularViews/Projects/add.ctp'}).
 
 
-        when('/posts',{ title: 'Posts',controller : 'ListPostsCtrl',templateUrl : 'AngularViews/Posts/index.ctp'}).
-        when('/newPost', {title:"Add Post",controller:'CreateCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
-        when('/edit/:postId', {title:"Update Post", controller:'EditCtrl',templateUrl:'AngularViews/Posts/add.ctp'}).
         otherwise({ redirectTo :'/posts'});
 
 }]);
@@ -33,8 +36,6 @@ app.run(['$location', '$rootScope', function($location, $rootScope) {
 
 
 
-
-
 app.directive("unique-email",function(){
   return{
       restrict:"E",
@@ -44,6 +45,8 @@ app.directive("unique-email",function(){
   }
 
 });
+
+
 
 
 app.directive("confirmPassCheck",function(){
@@ -63,6 +66,8 @@ app.directive("confirmPassCheck",function(){
 
 
 
+
+
 app.directive('datepicker', function() {
     return {
         restrict: 'A',
@@ -73,10 +78,6 @@ app.directive('datepicker', function() {
         }
     }
 });
-
-
-
-
 
 
 
@@ -127,6 +128,7 @@ app.factory("UserFactory",function($http){
 
 app.controller('ListPostsCtrl',['$scope','PostFactory','$location',function($scope,PostFactory,$location){
         $scope.title ="Posts";
+        $scope.deletePost = false;
         showPosts();
         function showPosts(){
             PostFactory.getPosts()
@@ -141,6 +143,7 @@ app.controller('ListPostsCtrl',['$scope','PostFactory','$location',function($sco
 
         }
         $scope.deletePost = function(id){
+            return false;
             PostFactory.deletePost(id)
                 .success(function(){
                     showPosts();
